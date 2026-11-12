@@ -1,0 +1,31 @@
+# --- Data: never commit the dataset (stored in Azure, see ingestion/manifest) ---
+*.csv
+!databricks/tests/*.csv
+*.zip
+*.parquet
+data/
+downloads/
+
+# --- Credentials and local config ---
+kaggle.json
+.kaggle/
+*.env
+!config/*.env.example
+.databrickscfg
+*.pem
+*_key
+dsai3202_lab3*
+*.pub
+
+# --- Python / notebooks ---
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
