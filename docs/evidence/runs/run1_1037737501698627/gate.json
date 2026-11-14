@@ -1,0 +1,85 @@
+{
+  "run_id": "1037737501698627",
+  "checked_utc": "2026-11-14T22:00:03Z",
+  "accepted_rows": 3569746,
+  "verdict": "PASS",
+  "failed_rules": [],
+  "checks": [
+    {
+      "rule": "schema_complete",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "rule": "not_empty",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "accepted_rows=3569746"
+    },
+    {
+      "rule": "accounting_balanced",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "input=6585210 accepted=3569746 rejected=3015464"
+    },
+    {
+      "rule": "contract_id_unique",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows=3569746 distinct_ids=3569746"
+    },
+    {
+      "rule": "model_fields_present",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows_with_missing_fields=0"
+    },
+    {
+      "rule": "phase0_rules_hold",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows_breaking_rules=0"
+    },
+    {
+      "rule": "reject_share_max",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "reject_share=0.4579 limit=0.8 (a sudden jump means the source format changed)"
+    },
+    {
+      "rule": "all_years_present",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "missing_years=[] (train (2010, 2021), test (2022, 2023) must all exist)"
+    },
+    {
+      "rule": "thin_years",
+      "policy": "WARN",
+      "passed": false,
+      "detail": "years_under_10k_rows=[2010]"
+    },
+    {
+      "rule": "extreme_rent",
+      "policy": "WARN",
+      "passed": false,
+      "detail": "rows_monthly_rent_over_1M_AED=81"
+    }
+  ],
+  "rows_per_year": {
+    "2010": 5689,
+    "2011": 32763,
+    "2012": 91370,
+    "2013": 179338,
+    "2014": 219027,
+    "2015": 237544,
+    "2016": 249653,
+    "2017": 275370,
+    "2018": 303213,
+    "2019": 326229,
+    "2020": 333132,
+    "2021": 393641,
+    "2022": 454614,
+    "2023": 468163
+  }
+}

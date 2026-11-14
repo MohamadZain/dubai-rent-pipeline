@@ -1,0 +1,34 @@
+{
+  "run_id": "950733792217660",
+  "published_utc": "2026-11-14T22:12:43Z",
+  "gold_table": "dsai3202_databricks.s_60306080.dld_rents_gold",
+  "gold_path": "abfss://curated@amazonlake60306080.dfs.core.windows.net/dld_rents/gold",
+  "gold_version": 41,
+  "gold_rows": 3569746,
+  "silver_rows": 3569746,
+  "silver_path": "abfss://processed@amazonlake60306080.dfs.core.windows.net/dld_rents/runs/run_id=950733792217660/silver",
+  "split_rows": {
+    "train": 2646969,
+    "test": 922777
+  },
+  "content_fingerprint": {
+    "rows": 3569746,
+    "hash_sum": "-5576305634925247666801"
+  },
+  "comparison": {
+    "run_id": "950733792217660",
+    "compared_to": "1037737501698627",
+    "checked": true,
+    "same_content_exceptAll": true,
+    "same_gold_fingerprint": true,
+    "this_fingerprint": {
+      "rows": 3569746,
+      "hash_sum": "-5576305634925247666801"
+    },
+    "baseline_fingerprint": {
+      "rows": 3569746,
+      "hash_sum": "-5576305634925247666801"
+    }
+  },
+  "publish_seconds": 44.1
+}

@@ -1,0 +1,101 @@
+contract_id,contract_reg_type_id,contract_reg_type_en,contract_start_date,contract_end_date,contract_amount,annual_amount,no_of_prop,line_number,is_free_hold,ejari_bus_property_type_id,ejari_bus_property_type_en,ejari_property_type_id,ejari_property_type_en,ejari_property_sub_type_id,ejari_property_sub_type_en,property_usage_en,project_number,project_name_en,master_project_en,area_id,area_name_en,actual_area,nearest_landmark_en,nearest_metro_en,nearest_mall_en,tenant_type_id,tenant_type_en
+TESTOK2010,1,New,01-05-2010,30-04-2011,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2011,1,New,01-05-2011,30-04-2012,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2012,1,New,01-05-2012,30-04-2013,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2013,1,New,01-05-2013,30-04-2014,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2014,1,New,01-05-2014,30-04-2015,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2015,1,New,01-05-2015,30-04-2016,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2016,1,New,01-05-2016,30-04-2017,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2017,1,New,01-05-2017,30-04-2018,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2018,1,New,01-05-2018,30-04-2019,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2019,1,New,01-05-2019,30-04-2020,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2020,1,New,01-05-2020,30-04-2021,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2021,1,New,01-05-2021,30-04-2022,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2022,1,New,01-05-2022,30-04-2023,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTOK2023,1,New,01-05-2023,30-04-2024,90000,90000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Dubai Marina,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD000,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD001,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD002,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD003,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD004,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD005,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD006,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD007,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD008,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD009,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD010,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD011,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD012,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD013,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD014,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD015,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD016,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD017,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD018,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD019,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD020,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD021,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD022,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD023,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD024,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD025,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD026,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD027,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD028,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD029,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD030,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD031,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD032,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD033,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD034,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD035,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD036,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD037,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD038,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD039,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD040,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD041,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD042,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD043,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD044,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD045,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD046,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD047,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD048,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD049,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD050,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD051,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD052,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD053,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD054,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD055,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD056,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD057,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD058,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD059,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD060,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD061,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD062,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD063,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD064,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD065,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD066,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD067,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD068,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD069,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD070,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD071,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD072,1,New,2012-06-01,2013-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD073,1,New,2013-06-01,2014-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD074,1,New,2014-06-01,2015-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD075,1,New,2015-06-01,2016-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD076,1,New,2016-06-01,2017-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD077,1,New,2017-06-01,2018-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD078,1,New,2018-06-01,2019-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD079,1,New,2019-06-01,2020-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD080,1,New,2020-06-01,2021-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD081,1,New,2021-06-01,2022-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD082,1,New,2022-06-01,2023-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD083,1,New,2023-06-01,2024-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD084,1,New,2010-06-01,2011-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person
+TESTBAD085,1,New,2011-06-01,2012-05-31,80000,80000,1,1,1,2,Unit,2.0,Flat,1.0,1bed room+Hall,Residential,1.0,PROJ,MP,526,Jumeirah Village Circle,75.0,"Landmark, with comma",Metro,Mall,1.0,Person

@@ -1,0 +1,15 @@
+{
+  "run_id": "950733792217660",
+  "compared_to": "1037737501698627",
+  "checked": true,
+  "same_content_exceptAll": true,
+  "same_gold_fingerprint": true,
+  "this_fingerprint": {
+    "rows": 3569746,
+    "hash_sum": "-5576305634925247666801"
+  },
+  "baseline_fingerprint": {
+    "rows": 3569746,
+    "hash_sum": "-5576305634925247666801"
+  }
+}

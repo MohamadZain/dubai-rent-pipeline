@@ -1,0 +1,87 @@
+{
+  "run_id": "339426482912624",
+  "checked_utc": "2026-11-14T22:18:58Z",
+  "accepted_rows": 14,
+  "verdict": "FAIL",
+  "failed_rules": [
+    "reject_share_max"
+  ],
+  "checks": [
+    {
+      "rule": "schema_complete",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "rule": "not_empty",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "accepted_rows=14"
+    },
+    {
+      "rule": "accounting_balanced",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "input=100 accepted=14 rejected=86"
+    },
+    {
+      "rule": "contract_id_unique",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows=14 distinct_ids=14"
+    },
+    {
+      "rule": "model_fields_present",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows_with_missing_fields=0"
+    },
+    {
+      "rule": "phase0_rules_hold",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "rows_breaking_rules=0"
+    },
+    {
+      "rule": "reject_share_max",
+      "policy": "FAIL",
+      "passed": false,
+      "detail": "reject_share=0.86 limit=0.8 (a sudden jump means the source format changed)"
+    },
+    {
+      "rule": "all_years_present",
+      "policy": "FAIL",
+      "passed": true,
+      "detail": "missing_years=[] (train (2010, 2021), test (2022, 2023) must all exist)"
+    },
+    {
+      "rule": "thin_years",
+      "policy": "WARN",
+      "passed": false,
+      "detail": "years_under_10k_rows=[2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023]"
+    },
+    {
+      "rule": "extreme_rent",
+      "policy": "WARN",
+      "passed": true,
+      "detail": "rows_monthly_rent_over_1M_AED=0"
+    }
+  ],
+  "rows_per_year": {
+    "2010": 1,
+    "2011": 1,
+    "2012": 1,
+    "2013": 1,
+    "2014": 1,
+    "2015": 1,
+    "2016": 1,
+    "2017": 1,
+    "2018": 1,
+    "2019": 1,
+    "2020": 1,
+    "2021": 1,
+    "2022": 1,
+    "2023": 1
+  }
+}

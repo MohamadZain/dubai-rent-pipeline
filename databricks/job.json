@@ -1,0 +1,93 @@
+{
+  "name": "dld-rents-pipeline-60306080",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "clean",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/60306080@udst.edu.qa/dld-project/01_clean",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "1114-205631-f3b6qabl",
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "validate",
+      "depends_on": [
+        {
+          "task_key": "clean"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/60306080@udst.edu.qa/dld-project/02_validate",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "1114-205631-f3b6qabl",
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "publish",
+      "depends_on": [
+        {
+          "task_key": "validate"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/60306080@udst.edu.qa/dld-project/03_publish",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "1114-205631-f3b6qabl",
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    }
+  ],
+  "queue": {
+    "enabled": true
+  },
+  "parameters": [
+    {
+      "name": "lake",
+      "default": "amazonlake60306080"
+    },
+    {
+      "name": "catalog",
+      "default": "dsai3202_databricks"
+    },
+    {
+      "name": "schema",
+      "default": "s_60306080"
+    },
+    {
+      "name": "run_id",
+      "default": "{{job.run_id}}"
+    },
+    {
+      "name": "input_path",
+      "default": "processed/dld_rents/landing/v1/DLD_Rents.csv"
+    },
+    {
+      "name": "compare_to",
+      "default": ""
+    },
+    {
+      "name": "max_reject_share",
+      "default": "0.80"
+    }
+  ]
+}
