@@ -1,0 +1,112 @@
+# Feature specification, version v1 (DSAI3202 Phase 1, guideline II.5)
+# Built by features/05_features.py from dsai3202_databricks.s_60306080.dld_rents_gold.
+# Saved as dsai3202_databricks.s_60306080.dld_rents_features_v1 (Delta, curated/dld_rents/features/v1).
+# A version is never overwritten: any change to a definition below means a new version (v2).
+
+version: v1
+source_table: dsai3202_databricks.s_60306080.dld_rents_gold
+key: contract_id
+split:
+  column: split
+  train: contract_year 2010-2021
+  test: contract_year 2022-2023
+target:
+  name: log_monthly_rent
+  definition: ln(annual_amount / 12)
+  reported_in: monthly_rent_aed (MAPE and MAE are computed in AED after back-transform)
+
+features:
+  - name: area_name_en
+    type: string (categorical, 179 areas)
+    source: area_name_en
+    definition: DLD area name, unchanged
+    available_at_prediction_time: yes (the user enters the location)
+    leakage_risk: none on its own; an area-level rent statistic must use training years only
+
+  - name: property_type_group
+    type: string (categorical)
+    source: property_type (ejari_property_type_en)
+    definition: Flat (Flat, Studio, Penthouse, Hotel apartments), Villa (any type containing "villa"), Other
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+  - name: bedrooms
+    type: int, nullable
+    source: property_sub_type (ejari_property_sub_type_en)
+    definition: Studio = 0; "N bed rooms+hall" (incl. "+Maids Room") = N; any other label = null
+    coverage: 99.9% of rows (null for Duplex, Penthouse, Office, Room and other rare labels)
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+  - name: sub_type_group
+    type: string (categorical)
+    source: property_sub_type
+    definition: the sub-type label if it has at least 1000 rows, otherwise "other"
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+  - name: size_m2
+    type: double
+    source: actual_area
+    definition: property size in square metres, > 10 (cleaning rule)
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+  - name: log_size_m2
+    type: double
+    source: actual_area
+    definition: ln(size_m2); EDA shows log(size) vs log(rent) correlation 0.62
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+  - name: reg_type
+    type: string (categorical)
+    source: contract_reg_type_en
+    definition: New or Renew
+    available_at_prediction_time: yes (known when the contract is signed or renewed)
+    leakage_risk: none
+
+  - name: contract_year
+    type: int
+    source: contract_start_date
+    definition: year of the contract start date
+    available_at_prediction_time: yes (the start date is known before signing)
+    leakage_risk: low; test years 2022-2023 are outside the training range, so tree models cannot
+      extrapolate the 2022-2023 rise (stated as a risk in Phase 0)
+
+  - name: contract_month
+    type: int
+    source: contract_start_date
+    definition: month of the contract start date, 1-12
+    used_by: secondary question only (model with vs without year and month)
+    available_at_prediction_time: yes
+    leakage_risk: none
+
+main_model_features: [area_name_en, property_type_group, bedrooms, sub_type_group, size_m2, log_size_m2,
+                      reg_type, contract_year]
+
+not_features:
+  - name: plausible_row
+    reason: computed from the target (rent > 1M AED/month, size > 2000 m2, rent per m2 < 1 or > 1000);
+      an evaluation filter for Phase 2, never a model input
+  - name: annual_amount_aed / contract_amount_aed / monthly_rent_aed
+    reason: these are the target or are computed from it
+  - name: end_date / duration_days
+    reason: used only for the cleaning rule; kept out of the model to avoid using contract details
+      that define the target's period
+  - name: published_run_id / feature_version / gold_version
+    reason: lineage metadata, not property information
+  - name: tenant_type / is_free_hold
+    reason: not in the Phase-0 feature list (kept in gold for EDA)
+
+baseline:
+  table: dsai3202_databricks.s_60306080.dld_rents_baseline_area_v1
+  definition: predicted rent = size_m2 x median monthly rent per m2 of the area
+  computed_from: training years 2010-2021 only, plausible rows only
+  fallback: overall training median rent per m2 for areas not seen in training
+
+leakage_checks_run_in_notebook:
+  - one row per contract_id, so no contract is in both train and test
+  - every train row is 2010-2021 and every test row is 2022-2023
+  - no feature is the target, the rent, the contract amount, the end date or the duration
+  - the baseline lookup uses no row after 2021
