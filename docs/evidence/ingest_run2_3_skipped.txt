@@ -1,0 +1,26 @@
+Ingestion runs 2 and 3: rerun check (VM vm-titanic-lab2, 2026-11-14, times in UTC)
+Command (both runs): LAKE=amazonlake60306080 bash ingestion/ingest.sh   (with the fixed verify step)
+
+Result: both runs found the blob already in raw/dld_rents/v1/ with the same SHA-256 and wrote nothing.
+The blob's etag (0x8DF42842F21B23C) and lastModified (19:19:20, the time of run 1's upload) did not change,
+so the preserved original was neither duplicated nor overwritten.
+
+--- Run 2 terminal output, as captured ---
+azureuser@vm-titanic-lab2:~/dubai-rent-pipeline$ LAKE=amazonlake60306080 bash ingestion/ingest.sh
+[19:25:28] Checking Azure sign-in and lake 'amazonlake60306080'...
+[19:25:29] Local copy exists, not downloading again: /home/azureuser/dld_download/DLD_Rents.csv
+[19:25:29] Hashing and counting rows (about 1-2 min)...
+[19:25:55] bytes=1405747509 rows=6585210 columns=28
+[19:25:55] sha256=253b1de0bcc2017f8dc76e47c58cc9831510be302ffdf6129dcc566392519574
+[19:25:56] SKIPPED: blob already exists with the same SHA-256 - original preserved, nothing written.
+[19:25:56] Verifying blob in the lake...
+[19:25:57] MATCH: lake size and SHA-256 equal the local source.
+[19:25:58] Manifest saved to raw/dld_rents/v1/_manifest.json
+[19:25:58] Run logged in /home/azureuser/dubai-rent-pipeline/ingestion/ingest_runs.log
+
+===== RESULT: SKIPPED | rows=6585210 | etag=0x8DF42842F21B23C | lastModified=2026-11-14T19:19:20+00:00 =====
+
+--- Run 3 ---
+Same command, run at 19:26:29 UTC. Its full terminal output was not saved; its result is the second line of
+ingestion/ingest_runs.log:
+20261114T192629Z	SKIPPED	bytes=1405747509	sha256=253b1de0bcc2017f8dc76e47c58cc9831510be302ffdf6129dcc566392519574	etag=0x8DF42842F21B23C	lastModified=2026-11-14T19:19:20+00:00
