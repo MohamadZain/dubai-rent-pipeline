@@ -1,0 +1,50 @@
+Ingestion run 1: first upload (VM vm-titanic-lab2, 2026-11-14, times in UTC)
+Command: LAKE=amazonlake60306080 bash ingestion/ingest.sh
+Terminal output as captured. The script stopped silently after "Verifying blob in the lake..." because of a bug
+in its verify step (a `read` at end of input under `set -e`). The upload itself completed (see the AzCopy summary).
+The bug was fixed and the script was rerun; runs 2 and 3 are in ingest_run2_3_skipped.txt and ingestion/ingest_runs.log.
+
+azureuser@vm-titanic-lab2:~/dubai-rent-pipeline$ LAKE=amazonlake60306080 bash ingestion/ingest.sh
+[19:18:20] Checking Azure sign-in and lake 'amazonlake60306080'...
+[19:18:22] Downloading DLD_Rents.csv from Kaggle (zainabhejairi/dubai-real-estates-1969-2023)...
+Dataset URL: https://www.kaggle.com/datasets/zainabhejairi/dubai-real-estates-1969-2023
+License(s): other
+Downloading DLD_Rents.csv.zip to /home/azureuser/dld_download
+100%|█████████████████████████████████████████████████████| 156M/156M [00:13<00:00, 11.7MB/s]
+
+[19:18:41] Unzipping...
+[19:18:45] Hashing and counting rows (about 1-2 min)...
+[19:19:11] bytes=1405747509 rows=6585210 columns=28
+[19:19:11] sha256=253b1de0bcc2017f8dc76e47c58cc9831510be302ffdf6129dcc566392519574
+[19:19:12] No blob at raw/dld_rents/v1/DLD_Rents.csv -> uploading...
+INFO: Authenticating to destination using Azure AD
+INFO: Any empty folders will not be processed, because source and/or destination doesn't have full folder support
+INFO: Scanning...
+
+Job f9b30da1-11b0-3443-7668-2124bef38f14 has started
+Log file is located at: /home/azureuser/.azcopy/f9b30da1-11b0-3443-7668-2124bef38f14.log
+
+100.0 %, 1 Done, 0 Failed, 0 Pending, 0 Skipped, 1 Total, 2-sec Throughput (Mb/s): 621.2004
+
+
+Job f9b30da1-11b0-3443-7668-2124bef38f14 summary
+Elapsed Time (Minutes): 0.1334
+Number of File Transfers: 1
+Number of Folder Property Transfers: 0
+Number of Symlink Transfers: 0
+Total Number of Transfers: 1
+Number of File Transfers Completed: 1
+Number of Folder Transfers Completed: 0
+Number of File Transfers Failed: 0
+Number of Folder Transfers Failed: 0
+Number of File Transfers Skipped: 0
+Number of Folder Transfers Skipped: 0
+Number of Symbolic Links Skipped: 0
+Number of Hardlinks Converted: 0
+Number of Hardlinks Skipped: 0
+Number of Special Files Skipped: 0
+Total Number of Bytes Transferred: 1405747509
+Final Job Status: Completed
+
+[19:19:21] Verifying blob in the lake...
+azureuser@vm-titanic-lab2:~/dubai-rent-pipeline$
