@@ -36,7 +36,8 @@ RUN1 = "1037737501698627"   # run whose bronze/rejects we compare with (same dat
 BRONZE_PATH  = f"abfss://processed@{LAKE}.dfs.core.windows.net/dld_rents/runs/run_id={RUN1}/bronze"
 REJECTS_PATH = f"abfss://processed@{LAKE}.dfs.core.windows.net/dld_rents/runs/run_id={RUN1}/rejects"
 EDA_DIR      = f"abfss://curated@{LAKE}.dfs.core.windows.net/dld_rents/eda"
-REL_ERR = 0.001             # approxQuantile rank error: each quantile within 0.1% of its true rank
+REL_ERR = 0.00001           # approxQuantile rank error 0.001%: accurate even at p0.1 / p99.9
+                            # (0.1% was too coarse: at p99.9 it returned the maximum)
 
 # chart style: one blue for a single series; blue/orange for two groups; recessive grid
 BLUE, ORANGE, INK, MUTED, GRID = "#2a78d6", "#eb6834", "#0b0b0b", "#52514e", "#e4e3df"
@@ -261,23 +262,33 @@ display(subtypes.head(25)); display(reg)
 m2_q = gold.approxQuantile("rent_per_m2", [0.001, 0.999], REL_ERR)
 size_q = gold.approxQuantile("size_m2", [0.001, 0.999], REL_ERR)
 over_1m = gold.filter("monthly_rent_aed > 1000000")
+# plain-sense limits that do not depend on quantiles (median rent is about 45 AED/m2/month)
 outl = {
-  "monthly_rent_over_1M": over_1m.count(),
+  "monthly_rent_over_1M_AED": over_1m.count(),
+  "size_over_2000_m2": gold.filter("size_m2 > 2000").count(),
+  "rent_per_m2_under_1_AED": gold.filter("rent_per_m2 < 1").count(),
+  "rent_per_m2_over_1000_AED": gold.filter("rent_per_m2 > 1000").count(),
   "rent_per_m2_below_p0.1": gold.filter(F.col("rent_per_m2") < m2_q[0]).count(),
   "rent_per_m2_above_p99.9": gold.filter(F.col("rent_per_m2") > m2_q[1]).count(),
-  "size_above_p99.9": gold.filter(F.col("size_m2") > size_q[1]).count(),
 }
-summary["outliers"] = {**outl, "rent_per_m2_p0.1": round(m2_q[0], 2), "rent_per_m2_p99.9": round(m2_q[1], 2),
-                       "size_p99.9_m2": round(size_q[1], 1)}
+outl["any_of_the_four_limits"] = gold.filter("monthly_rent_aed > 1000000 OR size_m2 > 2000 OR "
+                                             "rent_per_m2 < 1 OR rent_per_m2 > 1000").count()
+summary["outliers"] = {**outl, "rent_per_m2_p0.1": round(m2_q[0], 3), "rent_per_m2_p99.9": round(m2_q[1], 2),
+                       "size_p0.1_m2": round(size_q[0], 1), "size_p99.9_m2": round(size_q[1], 1)}
 for k, v in outl.items():
     print(f"{k:28} {v:>8,}")
-print(f"rent per m2 p0.1 = {m2_q[0]:.2f}, p99.9 = {m2_q[1]:.2f} AED/m2/month; size p99.9 = {size_q[1]:,.0f} m2")
+print(f"rent per m2: p0.1 = {m2_q[0]:.2f}, p99.9 = {m2_q[1]:.2f} AED/m2/month;  "
+      f"size: p0.1 = {size_q[0]:,.0f}, p99.9 = {size_q[1]:,.0f} m2")
+print(f"=> {outl['any_of_the_four_limits']:,} rows ({outl['any_of_the_four_limits'] / N:.3%}) break at least one plain-sense limit")
 
 print("\nRents over 1M AED/month by property type:")
 display(over_1m.groupBy("property_type", "property_sub_type").count().orderBy(F.desc("count")))
 print("10 highest rents per m2:")
 display(gold.orderBy(F.desc("rent_per_m2")).select("contract_id", "contract_year", "area_name_en", "property_type",
         "property_sub_type", "size_m2", "annual_amount_aed", "monthly_rent_aed", "rent_per_m2").limit(10))
+print("10 largest sizes:")
+display(gold.orderBy(F.desc("size_m2")).select("contract_id", "contract_year", "area_name_en", "property_type",
+        "property_sub_type", "size_m2", "monthly_rent_aed", "rent_per_m2").limit(10))
 
 # COMMAND ----------
 
