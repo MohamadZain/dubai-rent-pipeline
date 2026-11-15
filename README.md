@@ -74,18 +74,34 @@ Evidence: [raw folder](docs/evidence/raw_v1_folder.png) · [SHA-256 in blob meta
 **Architecture** (Azure services and their roles):
 
 ```mermaid
-flowchart LR
-    K["Kaggle<br/>DLD_Rents.csv"] -->|Kaggle API| VM["Azure VM<br/>vm-titanic-lab2<br/>ingestion host:<br/>ingest.sh, land_for_databricks.sh"]
-    VM -->|AzCopy, write-once,<br/>SHA-256 manifest| RAW["ADLS Gen2: raw<br/>preserved original"]
-    VM -->|same SHA-256| LAND["ADLS Gen2: processed<br/>landing copy"]
-    subgraph DBX["Azure Databricks: job dld-rents-pipeline-60306080"]
-        JOB["01_clean<br/>bronze, silver, rejects"] --> VAL["02_validate<br/>quality gate"] --> PUB["03_publish<br/>gold + comments"]
+flowchart TB
+    K["Kaggle: DLD_Rents.csv (1.41 GB)"]
+
+    subgraph ING["1. Ingestion: Azure VM vm-titanic-lab2"]
+        VM["ingest.sh + land_for_databricks.sh<br/>download, SHA-256 manifest, AzCopy"]
     end
+
+    subgraph LAKE["2. Storage: ADLS Gen2 amazonlake60306080"]
+        RAW["raw/dld_rents/v1<br/>preserved original (write-once)"]
+        LAND["processed/landing/v1<br/>same file, hash-checked"]
+    end
+
+    subgraph DBX["3. ETL: Azure Databricks job dld-rents-pipeline-60306080"]
+        JOB["01_clean<br/>bronze, silver, rejects"] --> VAL["02_validate<br/>quality gate (FAIL stops publish)"]
+        VAL --> PUB["03_publish<br/>gold + column comments"]
+    end
+
+    subgraph UCAT["4. Catalog: Unity Catalog dsai3202_databricks.s_60306080"]
+        GOLD["dld_rents_gold<br/>3,569,746 rows"]
+        FEAT["dld_rents_features_v1<br/>dld_rents_baseline_area_v1"]
+    end
+
+    K --> VM
+    VM --> RAW
+    VM --> LAND
     LAND --> JOB
-    PUB -->|Delta| CUR["ADLS Gen2: curated<br/>gold, quality JSON"]
-    PUB --> UC["Unity Catalog<br/>dld_rents_gold"]
-    UC --> NB["04_eda, 05_features<br/>notebooks"]
-    NB --> UC2["Unity Catalog<br/>dld_rents_features_v1<br/>dld_rents_baseline_area_v1"]
+    PUB --> GOLD
+    GOLD -->|04_eda, 05_features| FEAT
 ```
 
 | Service | Role |
