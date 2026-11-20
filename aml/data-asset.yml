@@ -1,0 +1,17 @@
+# Written by aml/retain_for_aml.py. Register with: az ml data create -f aml/data-asset.yml
+# The path is a content-addressed snapshot: its folder name is the hash of its _manifest.json.
+$schema: https://azuremlschemas.azureedge.net/latest/data.schema.json
+name: dubai-rents-features
+version: 1
+type: uri_folder
+description: Retained export v1 of dld_rents_features_v1 (Delta v7) and dld_rents_baseline_area_v1 (Delta v1)
+path: abfss://curated@amazonlake60306080.dfs.core.windows.net/dld_rents/aml_snapshots/525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a/
+tags:
+  snapshot_sha256: 525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a
+  feature_version: v1
+  features_table: dsai3202_databricks.s_60306080.dld_rents_features_v1
+  features_delta_version: "7"
+  baseline_table: dsai3202_databricks.s_60306080.dld_rents_baseline_area_v1
+  baseline_delta_version: "1"
+  rows: "3569746"
+  export_version: v1

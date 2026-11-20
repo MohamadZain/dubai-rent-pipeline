@@ -1,0 +1,31 @@
+{
+  "format": 1,
+  "project": "dubai-rent-pipeline",
+  "export_version": "v1",
+  "export_created_utc": "2026-11-20T19:57:24+00:00",
+  "features_source_table": "dsai3202_databricks.s_60306080.dld_rents_features_v1",
+  "features_delta_version": 7,
+  "feature_version": "v1",
+  "baseline_source_table": "dsai3202_databricks.s_60306080.dld_rents_baseline_area_v1",
+  "baseline_delta_version": 1,
+  "rows": 3569746,
+  "train_rows": 2646969,
+  "test_rows": 922777,
+  "baseline_areas": 172,
+  "parts": [
+    {
+      "path": "baseline_area/part-00000-tid-5086721280858173704-5b89ea72-5902-4764-aee3-b43b85ad2d07-46-1.c000.snappy.parquet",
+      "sha256": "769e17f617e90a639b25b0907258fe571e9358bcd286023cebf9298b95a983c0",
+      "rows": 172,
+      "bytes": 6275
+    },
+    {
+      "path": "features/part-00000-tid-315415277630485766-6bf2eb1c-c283-4dcf-b72e-26043e297806-40-1.c000.snappy.parquet",
+      "sha256": "35f94429b18be881ace628f7761223a0c80b78ed73442dec3e7f80da6d07202f",
+      "rows": 3569746,
+      "bytes": 57680581
+    }
+  ],
+  "snapshot_sha256": "525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a",
+  "path": "abfss://curated@amazonlake60306080.dfs.core.windows.net/dld_rents/aml_snapshots/525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a/"
+}

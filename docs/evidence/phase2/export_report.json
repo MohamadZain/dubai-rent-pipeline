@@ -1,0 +1,76 @@
+{
+  "export_version": "v1",
+  "export_root": "abfss://curated@amazonlake60306080.dfs.core.windows.net/dld_rents/aml_export/v1",
+  "created_utc": "2026-11-20T19:57:24+00:00",
+  "features": {
+    "source_table": "dsai3202_databricks.s_60306080.dld_rents_features_v1",
+    "delta_version": 7,
+    "feature_version": "v1",
+    "folder": "features",
+    "rows": 3569746,
+    "train_rows": 2646969,
+    "test_rows": 922777,
+    "implausible_rows": 32406,
+    "columns": [
+      "contract_id",
+      "split",
+      "area_name_en",
+      "property_type_group",
+      "bedrooms",
+      "sub_type_group",
+      "size_m2",
+      "log_size_m2",
+      "reg_type",
+      "contract_year",
+      "contract_month",
+      "log_monthly_rent",
+      "monthly_rent_aed",
+      "plausible_row",
+      "feature_version",
+      "gold_version"
+    ],
+    "parts": [
+      {
+        "file": "part-00000-tid-315415277630485766-6bf2eb1c-c283-4dcf-b72e-26043e297806-40-1.c000.snappy.parquet",
+        "bytes": 57680581
+      }
+    ]
+  },
+  "baseline_area": {
+    "source_table": "dsai3202_databricks.s_60306080.dld_rents_baseline_area_v1",
+    "delta_version": 1,
+    "folder": "baseline_area",
+    "areas": 172,
+    "overall_median_rent_per_m2_train": 52.27272727272727,
+    "columns": [
+      "area_name_en",
+      "median_rent_per_m2_train",
+      "train_rows",
+      "first_year",
+      "last_year",
+      "overall_median_rent_per_m2_train",
+      "baseline_version"
+    ],
+    "parts": [
+      {
+        "file": "part-00000-tid-5086721280858173704-5b89ea72-5902-4764-aee3-b43b85ad2d07-46-1.c000.snappy.parquet",
+        "bytes": 6275
+      }
+    ]
+  },
+  "checks": {
+    "columns_as_phase1": true,
+    "rows": true,
+    "one_row_per_contract": true,
+    "train_rows": true,
+    "test_rows": true,
+    "train_ends_2021": true,
+    "test_starts_2022": true,
+    "implausible_rows": true,
+    "baseline_areas": true,
+    "baseline_train_only": true,
+    "one_fallback_value": true,
+    "read_back_rows": true,
+    "read_back_content": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "creation_context": {
+    "created_at": "2026-11-20T20:39:42.477956+00:00",
+    "created_by": "Mohamad Zain",
+    "created_by_type": "CreatedByType.USER",
+    "last_modified_at": "2026-11-20T20:39:42.488370+00:00"
+  },
+  "description": "Retained export v1 of dld_rents_features_v1 (Delta v7) and dld_rents_baseline_area_v1 (Delta v1)",
+  "id": "/subscriptions/0b475409-9d7c-4dff-a07b-084eff651874/resourceGroups/rg-dsai3202-mohamad-60306080/providers/Microsoft.MachineLearningServices/workspaces/mlwdsai320260306080/data/dubai-rents-features/versions/1",
+  "name": "dubai-rents-features",
+  "path": "abfss://curated@amazonlake60306080.dfs.core.windows.net/dld_rents/aml_snapshots/525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a/",
+  "properties": {},
+  "resourceGroup": "rg-dsai3202-mohamad-60306080",
+  "tags": {
+    "baseline_delta_version": "1",
+    "baseline_table": "dsai3202_databricks.s_60306080.dld_rents_baseline_area_v1",
+    "export_version": "v1",
+    "feature_version": "v1",
+    "features_delta_version": "7",
+    "features_table": "dsai3202_databricks.s_60306080.dld_rents_features_v1",
+    "rows": "3569746",
+    "snapshot_sha256": "525948929580fa75195cb597d0837c283fa44fb0d20f920b396feb0d811db93a"
+  },
+  "type": "uri_folder",
+  "version": "1"
+}
